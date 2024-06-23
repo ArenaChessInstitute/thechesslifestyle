@@ -1,0 +1,422 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #f4f4f4;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero section */
+/* .hero {
+    background-image: url('https://images.unsplash.com/photo-1529699211952-734e80c4d42b');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+} */
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Benefits section */
+#benefits {
+    padding: 4rem 0;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    flex-basis: calc(25% - 20px);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.benefit-item i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Tournaments section */
+.tournaments {
+    background-color: #f4f4f4;
+    padding: 4rem 0;
+}
+
+.tournament-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.tournament-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Testimonials section */
+.testimonials {
+    padding: 4rem 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-item {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Contact section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 4rem 0;
+}
+
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* Header and Navigation */
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    /* Benefits section */
+    .benefit-item {
+        flex-basis: calc(50% - 20px);
+    }
+
+    /* Tournaments section */
+    .tournament-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Testimonials section */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero section */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Benefits section */
+    .benefit-item {
+        flex-basis: 100%;
+    }
+}
+
+/* Existing CSS remains the same */
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* Header and Navigation */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* The rest of your mobile styles remain the same */
+}
+
+/* The rest of your CSS remains the same */
+/* Update the header styles */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Update the logo styles to ensure visibility */
+.logo img {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1); /* This will make the logo white */
+}
+
+/* Update navigation link colors */
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* White text for better contrast */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Update hamburger menu bar color */
+.bar {
+    background-color: #fff; /* White bars for the hamburger menu */
+}
+
+/* Add some padding to the body to prevent content from hiding behind the fixed header */
+body {
+    padding-top: 1px; /* Adjust this value based on your header height */
+}
+
+/* Optional: Change header background on scroll */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95); /* Darker background when scrolled */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .menu-toggle {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .nav-links {
+        background-color: rgba(0, 0, 0, 0.9); /* Slightly more opaque for readability */
+        padding: 1rem;
+    }
+}
+
+#gallery {
+    padding: 50px 0;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-track-container {
+    overflow: hidden;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-slide {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 0 15px;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #4a90e2;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.author {
+    font-weight: bold;
+    color: #4a90e2;
+}
